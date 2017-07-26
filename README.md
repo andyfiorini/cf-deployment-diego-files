@@ -1,6 +1,7 @@
-## 18F Diego Deployment Manifests and Concourse pipeline
+# cf-deployment-diego-files
+## Diego Deployment Manifests and Concourse pipeline
 
-This repo contains the source for the BOSH deployment manifest and the Concourse pipeline for Diego at 18F.  The canonical documentation is in the [diego-release](https://github.com/cloudfoundry/diego-release) repo and in the [docs](https://github.com/cloudfoundry/diego-release/tree/develop/docs) directory.
+This repo contains the source for the BOSH deployment manifest and the Concourse pipeline for Diego.  The canonical documentation is in the [diego-release](https://github.com/cloudfoundry/diego-release) repo and in the [docs](https://github.com/cloudfoundry/diego-release/tree/develop/docs) directory.
 
 ### Diego manifest generation and deployment
 
@@ -10,7 +11,7 @@ This repo contains the source for the BOSH deployment manifest and the Concourse
 
 1. Clone this repo:
 
-    `git clone https://github.com/18F/cg-deploy-diego.git`
+    `git clone https://github.com/andyfiorini/cf-deployment-diegofiles.git`
 
 1. Generate diego certs:
 
@@ -60,4 +61,3 @@ Diego acceptance tests are integrated with the Cloud Foundry Acceptance Tests (C
 1. Configure the acceptance tests properties in the CF manifest.  See the [bosh-lite stub](https://github.com/cloudfoundry/cf-release/blob/master/templates/cf-infrastructure-bosh-lite.yml#L652-L660) for an example and the [CATs repo](https://github.com/cloudfoundry/cf-acceptance-tests) for more info.
 1. The preferred way to run the tests is with `bosh run errand acceptance_tests` while targeting your CF deployment, or trigger them in the CF Concourse pipeline (not the pipeline here).
 
-# cf-deployment-diego-files
